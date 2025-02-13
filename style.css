@@ -188,13 +188,14 @@ form button[type="submit"]:hover{
     align-items: center;
     
 }
-@media screen and(max-width:600px){
-    header nav{
+@media screen and (max-width: 768px) {
+    header nav {
         flex-direction: column;
+        align-items: center; 
     }
-    header nav form{
-        width:80%;
-        margin-top: 20px;
+    header nav form {
+        width: 90%;
+        margin-top: 10px;
     }
 }
 
