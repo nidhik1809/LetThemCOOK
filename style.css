@@ -7,7 +7,32 @@
 body{
     background-color:rgb(10, 25, 47);
     color:white;
+        padding-top: 80px;  /* Adjust based on header height */
+    
+    
 }
+@font-face {
+    font-family: cali;
+    src: url(GreatVibes-Regular.ttf);
+  }
+
+.logo-container {
+    display: flex;
+    align-items: center; /* Aligns text vertically */
+    gap: 30px;
+    padding-left: 10px; /* Adds space between the logo and motto */
+}
+
+.motto {
+    font-size: 24px; /* Adjust as needed */
+    font-weight: 400;
+    align-items: center;
+    color: #ffffff; /* Ensure it's visible */
+    font-family:cali;
+    margin-top: 12px;
+}
+
+
 
 header nav{
     background-color: rgb(10, 55, 64);
@@ -17,6 +42,11 @@ header nav{
     align-items: center;
     z-index: 1;
     flex-wrap: wrap;
+    position: fixed;  /* Makes the header stay at the top */
+    top: 0;  /* Keeps it at the very top */
+    left: 0;
+    width: 100%;  /* Ensures full-width */
+    z-index: 1000;
 }
 
 header nav h1{
@@ -75,7 +105,7 @@ form button[type="submit"]:hover{
     cursor: pointer;
     max-width: 350px;
     transition:box-shadow 0.3s ease-in-out ;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.4s ease-in-out;
 }
 .recipe:hover{
     transform: scale(1.05);
@@ -114,7 +144,7 @@ form button[type="submit"]:hover{
     /* background-color: rgb(63,111,124); */
     color: rgb(0, 0, 0);}
 
-/* Recipe details */
+ /* Recipe details */
 .recipe-details{
     display: none;
     position : fixed;
@@ -162,7 +192,7 @@ form button[type="submit"]:hover{
 .recipeName,.ingredientList,.recipeInstructions{
     margin-bottom: 20px;
 }
-/* adding scrollbar to recipe details popup */
+/* adding scrollbar to recipe details popup  */
 .recipe-details::-webkit-scrollbar{
     width:10px;
 }
@@ -180,15 +210,44 @@ form button[type="submit"]:hover{
     font-size:15px;
     padding:10px;
     border-radius:10px;
-    position: absolute;
+    position: fixed;
     top: 10px;
     right: 5px;
     height: 25px;
     width:25px;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    z-index: 1000;
     
+} 
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .recipe-details {
+        width: 85%; /* Adjusts width for mobile screens */
+        max-width: none;
+        height: auto;
+        max-height: 85vh; /* Prevents overflow */
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .recipeName {
+        font-size: 24px;
+    }
+
+    .ingredientList li, .recipeInstructions p {
+        font-size: 16px;
+    }
+
+    .recipe-close-btn {
+        height: 25px;
+        width: 25px;
+        font-size: 14px;
+    }
 }
+
 
 @media screen and (max-width: 600px) {
     header nav {
