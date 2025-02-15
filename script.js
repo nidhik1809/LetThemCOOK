@@ -82,3 +82,26 @@ searchBtn.addEventListener('click',(e)=>{
 
     fetchRecipes(searchInput);
 });
+
+const recipeDetails = document.querySelector('.recipe-details'); // Make sure this is correctly selected
+
+// Function to close the popup
+const closeRecipePopup = () => {
+    recipeDetails.style.display = "none";
+};
+
+// Close popup when clicking the close button
+recipeCloseBtn.addEventListener('click', closeRecipePopup);
+
+// Close popup when clicking outside it
+document.addEventListener("click", function (event) {
+    if (recipeDetails.style.display === "block" && !recipeDetails.contains(event.target) && !event.target.closest('.recipe')) {
+        closeRecipePopup();
+    }
+});
+
+// Prevent event propagation inside the popup to avoid accidental closing
+recipeDetails.addEventListener("click", (event) => {
+    event.stopPropagation();
+});
+
