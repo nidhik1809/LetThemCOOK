@@ -16,6 +16,7 @@ header nav{
     justify-content: space-between;
     align-items: center;
     z-index: 1;
+    flex-wrap: wrap;
 }
 
 header nav h1{
@@ -58,7 +59,7 @@ form button[type="submit"]:hover{
     display:grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     grid-gap:40px;
-    width: 80%;
+    width: 90%;
     margin : 10px auto;
     padding: 20px;
     place-items: center;
@@ -188,14 +189,63 @@ form button[type="submit"]:hover{
     align-items: center;
     
 }
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 600px) {
     header nav {
         flex-direction: column;
-        align-items: center; 
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        padding: 15px;
     }
+
+    header nav h1 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
     header nav form {
         width: 90%;
-        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    form input[type="text"] {
+        flex-grow: 1;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+
+    form button[type="submit"] {
+        padding: 10px 15px;
+        font-size: 16px;
+        border-radius: 5px;
+        white-space: nowrap;
+    }
+}
+
+/* Responsive Recipe Grid */
+@media screen and (max-width: 768px) {
+    .recipe-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        width: 90%;
+        grid-gap: 20px;
+    }
+
+    .recipe img {
+        height: 250px;
+    }
+
+    .recipe h3 {
+        font-size: 20px;
+    }
+
+    .recipe button {
+        font-size: 16px;
     }
 }
 
