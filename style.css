@@ -163,7 +163,7 @@ form button[type='submit']:hover { background-color: rgb(76, 125, 138); }
 .recipe-close-btn:hover { background-color: rgb(232, 31, 31); }
 
 @media (max-width: 768px) {
-    .recipe-details { width: 85%; max-height: 85vh; font-size: 16px; padding: 15px; top: 350px;}
+    .recipe-details { width: 85%; max-height: 85vh; font-size: 16px; padding: 15px; top:350px; }
     .recipeName { font-size: 24px; }
     .ingredientList li, .recipeInstructions p { font-size: 16px; }
     .recipe-close-btn { font-size: 14px; }
@@ -182,7 +182,7 @@ form button[type='submit']:hover { background-color: rgb(76, 125, 138); }
     .logo-container { flex-direction: column; gap: 0; align-items: center; }
     .motto { margin-top: 0; padding-bottom: 12px; }
     body { padding-top: 140px; }
-/*     h2{
-        padding-top:80px;
+    /* h2{
+        padding-top: 80px;
     } */
 }
