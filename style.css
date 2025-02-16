@@ -181,7 +181,7 @@ form button[type='submit']:hover { background-color: rgb(76, 125, 138); }
     form button[type='submit'] { padding: 10px 15px; font-size: 16px; }
     .logo-container { flex-direction: column; gap: 0; align-items: center; }
     .motto { margin-top: 0; padding-bottom: 12px; }
-/*     body { padding-top: 140px; } */
+    body { padding-top: 140px; }
     h2{
         padding-top:80px;
     }
